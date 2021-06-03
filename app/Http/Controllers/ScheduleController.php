@@ -41,7 +41,7 @@ class ScheduleController extends Controller
         try {
             $schedule = $this->schedule->findOrFail($id);
             return response()->json([
-                'data' => schedule,
+                'data' => $schedule,
             ],200);
         } catch (\Exception $e) {
             return response()->json([
